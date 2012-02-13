@@ -1,0 +1,16 @@
+{
+  "name": "Blocker for Google Reader™",
+  "version": "0.4",
+  "description": "Speed up your Google Reader™ by removing the +1 buttons",
+  "icons": { "24": "24.png", "48": "48.png", "128": "128.png" },
+  "permissions": [
+    "https://www.google.com/reader"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/reader/*", "*://reader.google.com/*"],
+      "run_at": "document_end",
+      "js": ["reader-blocker-content.js"]
+    }
+  ]
+}
